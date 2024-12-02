@@ -3,8 +3,6 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel";
 import React, { useState } from "react";
 
@@ -69,8 +67,6 @@ const HomeBanner = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
       </Carousel>
       {api && <CarouselDots api={api} items={items} />} {/* Render dots */}
     </div>

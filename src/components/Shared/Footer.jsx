@@ -1,18 +1,41 @@
+import { useRef } from "react";
 import { FaDiscord, FaInstagram, FaTelegramPlane } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { Link } from "react-router-dom";
+import Logo from "./Logo";
 
 const Footer = () => {
+  const formRef = useRef(null);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    fetch("YOUR_GOOGLE_SCRIPT_URL", {
+      method: "POST",
+      body: new FormData(formRef.current),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        alert(data.msg);
+      })
+      .catch((err) => console.log(err));
+  };
   return (
     <footer className="bg-[#464343]">
       <div className="container">
         {/* Newsletter */}
         <div className="pt-16 ">
-          <form className="mx-auto rounded-lg  bg-white flex relative max-w-md gap-x-4">
-            <label htmlFor="email-address" className="sr-only">
+          <form
+            ref={formRef}
+            onSubmit={handleSubmit}
+            className="mx-auto rounded-lg  bg-white flex relative max-w-md gap-x-4"
+          >
+            <label htmlFor="email" className="sr-only">
               Email address
             </label>
             <input
-              id="email-address"
+              id="email"
               name="email"
               type="email"
               autoComplete="email"
@@ -105,20 +128,12 @@ const Footer = () => {
               </div>
 
               <div>
-                <div className="flex justify-center lg:col-span-1 gap-3">
-                  <img
-                    src="/assets/logomain.png"
-                    alt="Logo"
-                    width={43}
-                    className="h-auto"
-                  />
-                  <img
-                    src="/assets/logofull.png"
-                    alt="Logo"
-                    width={159}
-                    className="h-auto"
-                  />
-                </div>
+                <Link
+                  to="/"
+                  className="flex md:justify-center lg:col-span-1 gap-3"
+                >
+                  <Logo />
+                </Link>
               </div>
               <div className="grid  gap-y-4 justify-items-end text-5xl gap-4">
                 <div className="text-black flex flex-row lg:flex-col justify-center lg:justify-stretch gap-6 lg:gap-0">
@@ -126,7 +141,7 @@ const Footer = () => {
                     href="http://"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-primary hover:bg-opacity-60 transition-all duration-700  rounded-full w-16 h-16 flex items-center justify-center my-3"
+                    className="bg-primary hover:bg-opacity-60 transition-all duration-700  rounded-full w-12 h-12 lg:w-16 lg:h-16 flex items-center justify-center my-3"
                   >
                     <FaDiscord className="text-2xl" />
                   </a>
@@ -134,7 +149,7 @@ const Footer = () => {
                     href="http://"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-primary hover:bg-opacity-60 transition-all duration-700  rounded-full w-16 h-16 flex items-center justify-center my-3"
+                    className="bg-primary hover:bg-opacity-60 transition-all duration-700  rounded-full w-12 h-12 lg:w-16 lg:h-16 flex items-center justify-center my-3"
                   >
                     <FaTelegramPlane className="text-2xl" />
                   </a>
@@ -142,7 +157,7 @@ const Footer = () => {
                     href="http://"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-primary hover:bg-opacity-60 transition-all duration-700  rounded-full w-16 h-16 flex items-center justify-center my-3"
+                    className="bg-primary hover:bg-opacity-60 transition-all duration-700  rounded-full w-12 h-12 lg:w-16 lg:h-16 flex items-center justify-center my-3"
                   >
                     <FaXTwitter className="text-2xl" />
                   </a>
@@ -150,7 +165,7 @@ const Footer = () => {
                     href="http://"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-primary hover:bg-opacity-60 transition-all duration-700  rounded-full w-16 h-16 flex items-center justify-center my-3"
+                    className="bg-primary hover:bg-opacity-60 transition-all duration-700  rounded-full w-12 h-12 lg:w-16 lg:h-16 flex items-center justify-center my-3"
                   >
                     <FaInstagram className="text-2xl" />
                   </a>
