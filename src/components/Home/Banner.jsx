@@ -54,7 +54,7 @@ const HomeBanner = () => {
   ];
 
   return (
-    <div className="relative container">
+    <div className="relative ">
       <Carousel setApi={setApi} className="relative">
         <CarouselContent>
           {items.map((item, index) => (
