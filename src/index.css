@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=AR+One+Sans+Variable:opsz,wght@8..144,100..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    @apply font-sf-pro;
+  }
+}
+
+body {
+  @apply bg-[#191919] text-[#ffff];
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("/sf-pro-display/SFPRODISPLAYBOLD.otf") format("opentype");
+  font-weight: 700; /* Bold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("/sf-pro-display/SFPRODISPLAYSEMIBOLDITALIC.otf") format("opentype");
+  font-weight: 600; /* SemiBold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("/sf-pro-display/SFPRODISPLAYMEDIUM.otf") format("opentype");
+  font-weight: 500; /* Medium */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("/sf-pro-display/SFPRODISPLAYREGULAR.otf") format("opentype");
+  font-weight: 400; /* Regular */
+  font-style: normal;
+}
+
+.button {
+  @apply w-full bg-black py-2 font-[500] text-lg text-white hover:text-white px-7 rounded-md transition duration-300;
+}
