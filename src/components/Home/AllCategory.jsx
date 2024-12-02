@@ -14,40 +14,39 @@ import Webseris from "./AllCategory/Webseris";
 const AllCategory = () => {
   return (
     <div className="my-[63px] relative">
-      <div className="container">
-        {/* Trending Movies */}
-        <TrendingNow />
-        {/* Movie Category Button */}
-        <CategorybyButton />
-        {/*Romace Movie Category  */}
-        <RomanceMovie />
-        {/*Thriller Movie Category  */}
-        <ThrillerMovie />
-        {/* Add Banner 1 */}
-
-        {/* <AddBanner1 /> */}
-        {/* Us Tv Show */}
-        <UsTvShow />
-        {/* HindiMovies  */}
-        <HindiMovies />
-        {/* Cashback offer */}
+      <div className="">
+        <div className="flex container flex-col gap-y-8 lg:gap-y-12">
+          <TrendingNow />
+          <CategorybyButton />
+          <RomanceMovie />
+          <ThrillerMovie />
+          {/* Add Banner 1 */}
+          {/* <AddBanner1 /> */}
+          <UsTvShow />
+          <HindiMovies />
+        </div>
         {/* <Cashback /> */}
-        {/* Festive Favourite Movies */}
-        <FestiveFav />
-        {/* Category by lagnguage */}
-        <LanguageCategory />
 
-        {/* Behind the schene */}
-        <BehindtheSchene />
-
-        {/* Docuemneries */}
-        <Documentaries />
+        <div
+          className=" my-6  container pt-8  bg-top rounded-none w-full bg-no-repeat backdrop-blur-[110px] "
+          style={{
+            backgroundImage: "url('/background_1.png')",
+            backgroundSize: "100% 85%",
+          }}
+        >
+          <div className=" gap-y-8 lg:gap-y-12 flex flex-col">
+            <FestiveFav />
+            <LanguageCategory />
+            <BehindtheSchene />
+            <Documentaries />
+          </div>
+        </div>
       </div>
 
       <div
-        className="w-full relative py-20 bg-cover mt-20"
+        className="w-full relative py-20 bg-cover "
         style={{
-          backgroundImage: "url(/assets/logowithbannerbottom.png)",
+          backgroundImage: "url(/background_2.png)",
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-t from-[#171717] rounded-xl"></div>
