@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./components/Shared/Layout";
 import "./index.css";
 import HomePage from "./pages/Home";
+import MoviewDetails from "./pages/Movies/MoviewDetails";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <HomePage />,
+      },
+      {
+        path: "/movie/:id",
+        element: <MoviewDetails />,
       },
     ],
   },

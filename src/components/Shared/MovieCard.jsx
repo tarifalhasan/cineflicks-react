@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const MovieCard = ({ imgSrc, name, slug }) => {
   return (
-    <Link to={`/moview/${slug}`} className="w-full">
+    <Link to={`/movie/${slug}`} className="w-full">
       <div>
         <img
           src={imgSrc}

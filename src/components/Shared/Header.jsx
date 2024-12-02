@@ -23,7 +23,7 @@ const Header = () => {
       <header className="py-4">
         <div className="flex justify-between items-center w-full">
           {/* Logo */}
-          <div className="flex gap-3 items-center">
+          <Link to="/" className="flex gap-3 items-center">
             <img src="/assets/logomain.png" alt="Logo" width={43} height={43} />
             <img
               className=" lg:block"
@@ -32,7 +32,7 @@ const Header = () => {
               width={159}
               height={43}
             />
-          </div>
+          </Link>
 
           {/* Desktop Navigation Links */}
           <nav className="hidden md:flex text-[16px] space-x-7 font-normal">
