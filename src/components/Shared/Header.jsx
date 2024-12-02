@@ -26,7 +26,7 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex text-[16px] space-x-7 font-normal">
+          <nav className="hidden lg:flex text-[16px] space-x-7 font-normal">
             {navLinks.map((link) => (
               <Link
                 key={link.label}
