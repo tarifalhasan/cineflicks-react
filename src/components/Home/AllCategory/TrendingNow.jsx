@@ -37,7 +37,7 @@ const TrendingNow = () => {
     <div>
       <div className="flex justify-between">
         <div>
-          <h2 className="font-bold relative after:border after:border-black after:h-[16px] after:absolute after:w-full after:left-3 z-20 after:-z-10 after:top-2 text-xl font-ar-one-sans lg:text-3xl l">
+          <h2 className="font-bold relative  text-xl font-ar-one-sans lg:text-3xl l">
             Trending Now
           </h2>
         </div>

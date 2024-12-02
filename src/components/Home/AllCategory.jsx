@@ -28,7 +28,7 @@ const AllCategory = () => {
         {/* <Cashback /> */}
 
         <div
-          className=" my-6  container pt-8  bg-top rounded-none w-full bg-no-repeat backdrop-blur-[110px] "
+          className=" my-6  container py-8  bg-top rounded-none w-full bg-no-repeat  "
           style={{
             backgroundImage: "url('/background_1.png')",
             backgroundSize: "100% 85%",

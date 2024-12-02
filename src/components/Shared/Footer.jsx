@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { FaDiscord, FaInstagram, FaTelegramPlane } from "react-icons/fa";
+import { FaInstagram, FaMedium, FaTelegramPlane } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import Logo from "./Logo";
@@ -53,8 +53,8 @@ const Footer = () => {
         </div>
 
         <div className="mx-auto space-y-8 px-4 py-16 sm:px-6 lg:space-y-16">
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-5 lg:grid-cols-5 ">
+          <div className="grid grid-cols-1  gap-8 lg:grid-cols-3">
+            <div className="grid grid-cols-1 items-end gap-8 sm:grid-cols-2 lg:col-span-5 lg:grid-cols-5 ">
               <div>
                 <p className="font-inter text-lg lg:text-xl text-white font-bold">
                   FAQ
@@ -136,38 +136,38 @@ const Footer = () => {
                 </Link>
               </div>
               <div className="grid  gap-y-4 justify-items-end text-5xl gap-4">
-                <div className="text-black flex flex-row lg:flex-col justify-center lg:justify-stretch gap-6 lg:gap-0">
+                <div className="text-black flex flex-row lg:flex-col justify-center lg:justify-stretch gap-6 lg:gap-3">
                   <a
-                    href="http://"
+                    href="https://medium.com/@cineflicksorg"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-primary hover:bg-opacity-60 transition-all duration-700  rounded-full w-12 h-12 lg:w-16 lg:h-16 flex items-center justify-center my-3"
+                    className="bg-primary hover:bg-opacity-60 transition-all duration-700  rounded-full w-10 h-10 flex items-center justify-center "
                   >
-                    <FaDiscord className="text-2xl" />
+                    <FaMedium className="text-xl text-white" />
                   </a>
                   <a
-                    href="http://"
+                    href="https://t.me/cineflicks_org"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-primary hover:bg-opacity-60 transition-all duration-700  rounded-full w-12 h-12 lg:w-16 lg:h-16 flex items-center justify-center my-3"
+                    className="bg-primary hover:bg-opacity-60 transition-all duration-700  rounded-full w-10 h-10 flex items-center justify-center "
                   >
-                    <FaTelegramPlane className="text-2xl" />
+                    <FaTelegramPlane className="text-xl text-white" />
                   </a>
                   <a
-                    href="http://"
+                    href="https://x.com/cineflicksorg"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-primary hover:bg-opacity-60 transition-all duration-700  rounded-full w-12 h-12 lg:w-16 lg:h-16 flex items-center justify-center my-3"
+                    className="bg-primary hover:bg-opacity-60 transition-all duration-700  rounded-full w-10 h-10 flex items-center justify-center "
                   >
-                    <FaXTwitter className="text-2xl" />
+                    <FaXTwitter className="text-xl text-white" />
                   </a>
                   <a
-                    href="http://"
+                    href="https://www.instagram.com/cineflicksorg/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-primary hover:bg-opacity-60 transition-all duration-700  rounded-full w-12 h-12 lg:w-16 lg:h-16 flex items-center justify-center my-3"
+                    className="bg-primary hover:bg-opacity-60 transition-all duration-700  rounded-full w-10 h-10 flex items-center justify-center "
                   >
-                    <FaInstagram className="text-2xl" />
+                    <FaInstagram className="text-xl text-white" />
                   </a>
                 </div>
               </div>
@@ -175,7 +175,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <p className="py-[56px] text-center bg-primary font-[20px ]">
+      <p className="py-2 text-center bg-primary font-[20px ]">
         &copy; 2024 Cineflicks All Rights Reserved.
       </p>
     </footer>

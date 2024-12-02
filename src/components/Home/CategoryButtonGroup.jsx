@@ -66,7 +66,7 @@ const CategoryButtonGroup = ({ onTabSelect }) => {
         {/* Scrollable Tab List */}
         <div
           ref={scrollRef}
-          className="flex l space-x-4 overflow-x-auto p-4 scrollbar-none"
+          className="flex l space-x-4 overflow-x-auto py-4 scrollbar-none"
           style={{ scrollbarWidth: "none" }}
         >
           {tabs.map((tab) => (

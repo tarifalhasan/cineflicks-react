@@ -19,7 +19,7 @@ function HomePage() {
       {/* <TrendingNowPage></TrendingNowPage> */}
 
       <img
-        className=" absolute w-full top-[12rem] lg:top-[38rem] -z-30"
+        className=" absolute w-full  top-[12rem] lg:top-[38rem] -z-30"
         src="/background_3.png"
         alt=""
       />

@@ -20,7 +20,7 @@ const CategorybyButton = () => {
   };
 
   return (
-    <div className="flex flex-wrap  mt-8">
+    <div className="flex flex-wrap  ">
       {category.map((category, index) => (
         <button
           key={index}
