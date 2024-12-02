@@ -9,7 +9,7 @@ function HomePage() {
   const [selectedTab, setSelectedTab] = useState("For You");
 
   return (
-    <>
+    <div className=" container relative overflow-hidden">
       <CategoryButtonGroup onTabSelect={setSelectedTab} />
       <HomeBanner />
       <Review />
@@ -17,7 +17,13 @@ function HomePage() {
       <AllCategory />
       {/* <SellectWallet></SellectWallet> */}
       {/* <TrendingNowPage></TrendingNowPage> */}
-    </>
+
+      <img
+        className=" absolute w-full top-[12rem] lg:top-[38rem] -z-30"
+        src="/background_3.png"
+        alt=""
+      />
+    </div>
   );
 }
 
