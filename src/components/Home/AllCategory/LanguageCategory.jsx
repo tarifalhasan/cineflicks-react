@@ -23,25 +23,30 @@ const LanguageCategoryData = [
 
 const LanguageCategory = () => {
   return (
-    <div className="mt-[68px]">
+    <div>
       <div className="flex justify-between">
-        <h1 className="font-bold text-[30px]">Watch In Your Language</h1>
+        <h2 className="font-bold relative text-xl font-ar-one-sans lg:text-3xl l">
+          Watch In Your Language
+        </h2>
       </div>
 
-      <div className=" mt-[20px]">
-        {/* Scrollable Grid Container */}
-        <div className="flex items-center gap-x-[18px] text-center">
+      <div className="mt-6 lg:mt-10">
+        <div className="flex items-center  gap-6 flex-wrap text-center">
           {LanguageCategoryData.map((movie, index) => (
             <div
               key={index}
-              className="text-center rounded-lg bg-black w-[140px] py-4 px-4 h-[134px] flex flex-col justify-end"
+              className="text-center relative overflow-hidden rounded-lg bg-black w-[135px] py-4 px-4 h-[130px] items-center gap-1 flex flex-col justify-center"
             >
-              <img
-                src={movie.image}
-                alt={`Poster of ${movie.name}`}
-                className="mx-auto"
-              />
-              <h2 className="mb-2 text-[22px] font-medium">{movie.name}</h2>
+              <div>
+                <img
+                  src={movie.image}
+                  alt={`Poster of ${movie.name}`}
+                  className="mx-auto object-contain max-h-[70px] w-[68px] h-auto"
+                />
+                <h2 className=" text-sm lg:text-lg font-medium">
+                  {movie.name}
+                </h2>
+              </div>
             </div>
           ))}
         </div>

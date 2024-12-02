@@ -1,53 +1,54 @@
+import MovieSlides from "@/components/Shared/MovieSlides";
+
 const usTvShowdata = [
   {
     name: "Love Aj Kal",
     image: "/assets/RomanceMovie/love.png",
+    slug: "12121",
   },
   {
     name: "Lootera",
     image: "/assets/RomanceMovie/lootera.png",
+    slug: "12121",
   },
   {
     name: "Raanjhanaa",
     image: "/assets/RomanceMovie/rann.png",
+    slug: "12121",
+  },
+  {
+    name: "Love Aj Kal",
+    image: "/assets/RomanceMovie/love.png",
+    slug: "12121",
+  },
+  {
+    name: "Lootera",
+    image: "/assets/RomanceMovie/lootera.png",
+    slug: "12121",
+  },
+  {
+    name: "Raanjhanaa",
+    image: "/assets/RomanceMovie/rann.png",
+    slug: "12121",
   },
 ];
 const UsTvShow = () => {
   return (
-    <div className="mt-[68px]">
+    <div>
       <div className="flex justify-between">
-        <h1 className="font-bold text-[30px]">US TV Shows</h1>
-        <a href="#" className="text-primary font-semibold text-[18px]">
+        <div>
+          <h2 className="font-bold relative after:border after:border-black after:h-[16px] after:absolute after:w-full after:left-3 z-20 after:-z-10 after:top-2 text-xl font-ar-one-sans lg:text-3xl l">
+            US TV Shows
+          </h2>
+        </div>
+        <a
+          href="#"
+          className="text-[#F2AA4C] font-ar-one-sans  font-medium  text-base font-lg"
+        >
           View All
         </a>
       </div>
-
-      <div className="relative mt-[20px]">
-        {/* Scrollable Grid Container */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[22px]">
-          {usTvShowdata.map((movie, index) => (
-            <div key={index}>
-              <img
-                src={movie.image}
-                alt={`Poster of ${movie.name}`}
-                className="w-full h-auto rounded-md"
-              />
-              <h2 className="mt-2 text-[22px] font-medium">{movie.name}</h2>
-            </div>
-          ))}
-        </div>
-
-        {/* Static Arrows in the Middle */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex justify-between w-full px-4">
-          <button className="text-white p-2 rounded-full ">
-            <img src="/public/assets/rl.svg"></img>
-          </button>
-
-          <button className="text-white p-2 rounded-full ">
-            <img src="/public/assets/ra.svg"></img>
-          </button>
-        </div>
-      </div>
+      <MovieSlides items={usTvShowdata} />
     </div>
   );
 };

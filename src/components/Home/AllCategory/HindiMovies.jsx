@@ -1,53 +1,55 @@
+import MovieSlides from "@/components/Shared/MovieSlides";
+
 const hindiMoviesData = [
   {
     name: "Love Aj Kal",
     image: "/assets/HindiMovies/1.png",
+    slug: "11",
   },
   {
     name: "Lootera",
     image: "/assets/HindiMovies/2.png",
+    slug: "11",
   },
   {
     name: "Raanjhanaa",
     image: "/assets/HindiMovies/3.png",
+    slug: "11",
+  },
+  {
+    name: "Love Aj Kal",
+    image: "/assets/HindiMovies/1.png",
+    slug: "11",
+  },
+  {
+    name: "Lootera",
+    image: "/assets/HindiMovies/2.png",
+    slug: "11",
+  },
+  {
+    name: "Raanjhanaa",
+    image: "/assets/HindiMovies/3.png",
+    slug: "11",
   },
 ];
 const HindiMovies = () => {
   return (
-    <div className="mt-[68px]">
+    <div>
       <div className="flex justify-between">
-        <h1 className="font-bold text-[30px]">Thriller Movies </h1>
-        <a href="#" className="text-primary font-semibold text-[18px]">
+        <div>
+          <h2 className="font-bold relative after:border after:border-black after:h-[16px] after:absolute after:w-full after:left-3 z-20 after:-z-10 after:top-2 text-xl font-ar-one-sans lg:text-3xl l">
+            Thriller Movies
+          </h2>
+        </div>
+        <a
+          href="#"
+          className="text-[#F2AA4C] font-ar-one-sans  font-medium  text-base font-lg"
+        >
           View All
         </a>
       </div>
 
-      <div className="relative mt-[20px]">
-        {/* Scrollable Grid Container */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[22px]">
-          {hindiMoviesData.map((movie, index) => (
-            <div key={index}>
-              <img
-                src={movie.image}
-                alt={`Poster of ${movie.name}`}
-                className="w-full h-auto rounded-md"
-              />
-              <h2 className="mt-2 text-[22px] font-medium">{movie.name}</h2>
-            </div>
-          ))}
-        </div>
-
-        {/* Static Arrows in the Middle */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex justify-between w-full px-4">
-          <button className="text-white p-2 rounded-full ">
-            <img src="/assets/rl.svg"></img>
-          </button>
-
-          <button className="text-white p-2 rounded-full ">
-            <img src="/assets/ra.svg"></img>
-          </button>
-        </div>
-      </div>
+      <MovieSlides items={hindiMoviesData} />
     </div>
   );
 };

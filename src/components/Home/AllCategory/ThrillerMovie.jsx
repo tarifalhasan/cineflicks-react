@@ -1,44 +1,44 @@
 import MovieSlides from "@/components/Shared/MovieSlides";
 
-const romanceMovieData = [
+const thrillerMovies = [
   {
-    name: "Love Aj Kal",
-    image: "/assets/RomanceMovie/love.png",
-    slug: "romance-movie",
+    name: "All of us are dead",
+    image: "/assets/ThrillerMovie/1.png",
+    slug: "12121",
   },
   {
     name: "Lootera",
-    image: "/assets/RomanceMovie/lootera.png",
-    slug: "romance-movie",
+    image: "/assets/ThrillerMovie/2.png",
+    slug: "12121",
   },
   {
     name: "Raanjhanaa",
-    image: "/assets/RomanceMovie/rann.png",
-    slug: "romance-movie",
+    image: "/assets/ThrillerMovie/3.png",
+    slug: "12121",
   },
   {
-    name: "Love Aj Kal",
-    image: "/assets/RomanceMovie/love.png",
-    slug: "romance-movie",
+    name: "All of us are dead",
+    image: "/assets/ThrillerMovie/1.png",
+    slug: "12121",
   },
   {
     name: "Lootera",
-    image: "/assets/RomanceMovie/lootera.png",
-    slug: "romance-movie",
+    image: "/assets/ThrillerMovie/2.png",
+    slug: "12121",
   },
   {
     name: "Raanjhanaa",
-    image: "/assets/RomanceMovie/rann.png",
-    slug: "romance-movie",
+    image: "/assets/ThrillerMovie/3.png",
+    slug: "12121",
   },
 ];
-const RomanceMovie = () => {
+const ThrillerMovie = () => {
   return (
-    <div className="mt-[68px]">
+    <div>
       <div className="flex justify-between">
         <div>
           <h2 className="font-bold relative after:border after:border-black after:h-[16px] after:absolute after:w-full after:left-3 z-20 after:-z-10 after:top-2 text-xl font-ar-one-sans lg:text-3xl l">
-            Romance Movies
+            Thriller Movies
           </h2>
         </div>
         <a
@@ -49,9 +49,9 @@ const RomanceMovie = () => {
         </a>
       </div>
 
-      <MovieSlides items={romanceMovieData} />
+      <MovieSlides items={thrillerMovies} />
     </div>
   );
 };
 
-export default RomanceMovie;
+export default ThrillerMovie;

@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const category = [
   "Movies",
   "Series",
@@ -9,15 +11,23 @@ const category = [
   "Live",
   "Studios",
 ];
+
 const CategorybyButton = () => {
+  const [selectedCategory, setSelectedCategory] = useState("Movies");
+
+  const handleCategoryClick = (category) => {
+    setSelectedCategory(category);
+  };
+
   return (
-    <div className="flex my-[43px]">
+    <div className="flex flex-wrap  mt-8">
       {category.map((category, index) => (
         <button
           key={index}
-          className={`  text-[16px] px-[31px] py-[13px] rounded-full font-[700] ${
-            category === "Movies"
-              ? "bg-primary text-black" // Active button styles
+          onClick={() => handleCategoryClick(category)}
+          className={`text-sm lg:text-base px-[31px]  py-3 rounded-full font-bold ${
+            selectedCategory === category
+              ? "bg-[#F2AA4C] text-black" // Active button styles
               : " text-white" // Inactive button styles
           }`}
         >

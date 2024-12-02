@@ -12,7 +12,7 @@ const Review = () => {
             className="mx-auto mt-2"
           />
           <br />
-          <p className="font-medium text-[30px]">
+          <p className="font-medium  text-md lg:text-2xl">
             Your new home for movies and series. Turn streaming into a rewarding
             experience! <br /> Watch. Earn. Repeat. | Welcome to Cineflicks
           </p>

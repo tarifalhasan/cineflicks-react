@@ -1,54 +1,52 @@
+import MovieSlides from "@/components/Shared/MovieSlides";
 const TrendingNowMovie = [
   {
     name: "Love Aj Kal",
     image: "/assets/TrendingNow/love.png",
+    slug: "tranding-1",
   },
   {
     name: "Lootera",
     image: "/assets/TrendingNow/lootera.png",
+    slug: "tranding-2",
   },
   {
     name: "Raanjhanaa",
-    image: "/assets/TrendingNow/rann.png",
+    image: "/assets/TrendingNow/Rann.png",
+    slug: "tranding-3",
+  },
+  {
+    name: "Love Aj Kal",
+    image: "/assets/TrendingNow/love.png",
+    slug: "tranding-4",
+  },
+  {
+    name: "Lootera",
+    image: "/assets/TrendingNow/lootera.png",
+    slug: "tranding-5",
+  },
+  {
+    name: "Raanjhanaa",
+    image: "/assets/TrendingNow/Rann.png",
+    slug: "tranding-6",
   },
 ];
 
 const TrendingNow = () => {
   return (
-    <div className="mt-[68px]">
+    <div>
       <div className="flex justify-between">
-        <h1 className="font-bold text-[30px]">Trending Now</h1>
+        <div>
+          <h2 className="font-bold relative after:border after:border-black after:h-[16px] after:absolute after:w-full after:left-3 z-20 after:-z-10 after:top-2 text-xl font-ar-one-sans lg:text-3xl l">
+            Trending Now
+          </h2>
+        </div>
         <a href="#" className="text-primary font-semibold text-[18px]">
           View All
         </a>
       </div>
 
-      <div className="relative mt-[20px]">
-        {/* Scrollable Grid Container */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[22px]">
-          {TrendingNowMovie.map((movie, index) => (
-            <div key={index}>
-              <img
-                src={movie.image}
-                alt={`Poster of ${movie.name}`}
-                className="w-full h-auto rounded-md"
-              />
-              <h2 className="mt-2 text-[22px] font-medium">{movie.name}</h2>
-            </div>
-          ))}
-        </div>
-
-        {/* Static Arrows in the Middle */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex justify-between w-full px-4">
-          <button className="text-white p-2 rounded-full ">
-            <img src="/assets/rl.svg"></img>
-          </button>
-
-          <button className="text-white p-2 rounded-full ">
-            <img src="/assets/ra.svg"></img>
-          </button>
-        </div>
-      </div>
+      <MovieSlides items={TrendingNowMovie} />
     </div>
   );
 };
