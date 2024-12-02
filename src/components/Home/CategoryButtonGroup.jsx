@@ -1,6 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
-import Container from "../Shared/Container";
 
 const CategoryButtonGroup = ({ onTabSelect }) => {
   const [activeTab, setActiveTab] = useState("For You");
@@ -16,14 +15,11 @@ const CategoryButtonGroup = ({ onTabSelect }) => {
     "Top 10",
     "Studios",
     "Live",
-    "For You",
-    "Reality",
-    "Big Boss",
-    "Top Free Movies",
-    "Premium",
-    "Top 10",
-    "Studios",
-    "Live",
+    "New Releases",
+    "Trending",
+    "Comedy",
+    "Drama",
+    "Documentaries",
   ];
 
   const handleTabClick = (tab) => {
@@ -55,8 +51,8 @@ const CategoryButtonGroup = ({ onTabSelect }) => {
   }, []);
 
   return (
-    <Container>
-      <div className="relative mt-9 mb-4">
+    <>
+      <div className="relative container mt-9 mb-4">
         {/* Left Arrow */}
         {showLeftArrow && (
           <button
@@ -70,7 +66,7 @@ const CategoryButtonGroup = ({ onTabSelect }) => {
         {/* Scrollable Tab List */}
         <div
           ref={scrollRef}
-          className="flex space-x-4 overflow-x-auto p-4 scrollbar-none"
+          className="flex l space-x-4 overflow-x-auto p-4 scrollbar-none"
           style={{ scrollbarWidth: "none" }}
         >
           {tabs.map((tab) => (
@@ -96,7 +92,7 @@ const CategoryButtonGroup = ({ onTabSelect }) => {
           <FiChevronRight size={20} />
         </button>
       </div>
-    </Container>
+    </>
   );
 };
 
