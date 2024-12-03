@@ -9,7 +9,9 @@ const MovieCard = ({ imgSrc, name, slug }) => {
           alt={`Poster of ${name}`}
           className="w-full h-[240px] md:h-[300px] object-cover rounded-md"
         />
-        <h4 className="mt-2 text-base lg:text-lg font-medium">{name}</h4>
+        <h4 className="mt-2 capitalize text-base lg:text-lg font-medium">
+          {name}
+        </h4>
       </div>
     </Link>
   );

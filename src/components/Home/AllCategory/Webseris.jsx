@@ -3,27 +3,32 @@ import MovieSlides from "@/components/Shared/MovieSlides";
 const webSerisData = [
   {
     image: "/assets/WebSeries/2.png",
-    name: "SDfdfdf",
+    slu: "SDfdfdf",
+    name: "",
   },
   {
     image: "/assets/WebSeries/3.png",
-    name: "45454",
+    slug: "45454",
+    name: "",
   },
   {
     image: "/assets/WebSeries/1.png",
-    name: "874584584",
+    slug: "874584584",
   },
   {
     image: "/assets/WebSeries/2.png",
-    name: "SDfdfdf",
+    slug: "SDfdfdf",
+    name: "",
   },
   {
     image: "/assets/WebSeries/3.png",
-    name: "45454",
+    slug: "45454",
+    name: "",
   },
   {
     image: "/assets/WebSeries/1.png",
-    name: "874584584",
+    slug: "874584584",
+    name: "",
   },
 ];
 const Webseris = () => {
